@@ -1,6 +1,8 @@
-<h1>Your Play Scoring</h1>
-<p>Check your results here</p>
-<p>
-  <%= "Your word #{@attempt}, #{@result[:message]} you scored #{@result[:score]} points"%>
-</p>
-<p><%= link_to "Play Again", :new %></p>
+<div class="container">
+  <h1>Longest Word Possible Game</h1>
+  <h2>Check your results here:</h2>
+  <p>
+    <%= "Your word #{@attempt}, #{@result[:message]} you scored #{@result[:score]} points"%>
+  </p>
+  <button class="button btn-light"><%= link_to "Play Again", :new %></button>
+</div>
