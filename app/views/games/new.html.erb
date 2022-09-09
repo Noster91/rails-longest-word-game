@@ -1,0 +1,18 @@
+<h1>Games#new</h1>
+<p>Find me in app/views/games/new.html.erb</p>
+<h2>List of Letters</h2>
+<ul>
+  <% @letters.each do |letter| %>
+    <li>
+    <%= letter %>
+    </li>
+  <% end %>
+</ul>
+<p><%= link_to "Refresh Grid", :new %></p>
+<h2>Create your Word</h2>
+<form class="form-group d-flex" action="/score" data-turbo="false">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag 'letters', @letters %>
+  <input class="form-control" type="text" name="word">
+  <input class="btn btn-primary d-flex align-items-center" type="submit" value="Play!">
+</form>
